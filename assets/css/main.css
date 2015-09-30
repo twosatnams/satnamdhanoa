@@ -1270,14 +1270,14 @@
 					#me header > h1 {
 						position: absolute;
 						left: 0;
-						bottom: 75%;
+						bottom: 52.5%;
 						margin: 0;
 					}
 
 					#me header > p {
 						position: absolute;
 						left: 0;
-						top: 30%;
+						top: 52.5%;
 						max-width: 61%;
 						font-size: 1.3em;
 						letter-spacing: -0.015em;
@@ -1388,6 +1388,20 @@
 						padding-top: 20px;
 						text-align: center;
 						display: block;
+					}
+
+					#faq > section {
+						-webkit-column-count: 2;
+				    -moz-column-count: 2;
+				    column-count: 2;
+						text-align: justify;
+						-webkit-column-gap: 35px;
+				    -moz-column-gap: 35px;
+				    column-gap: 35px;
+					}
+
+					#faq > section > p {
+						margin-bottom: 20px;
 					}
 	}
 
