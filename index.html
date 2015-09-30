@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Satnam Dhanoa</title>
@@ -6,288 +7,268 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-68147489-2', 'auto');
+		  ga('send', 'pageview');
+	</script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Skills</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+		<!-- Wrapper-->
+			<div id="wrapper">
 
-		<!-- Home -->
-			<div class="wrapper style1 first">
-				<article class="container" id="top">
-					<div class="row">
-						<div class="4u 12u(mobile)">
-							<!-- <span class="image fit">
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="icon fa-home active"><span>Home</span></a>
+						<a href="#work" class="icon fa-folder"><span>Work</span></a>
+						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+						<a href="#faq" class="icon fa-twitter"><span>FAQ</span></a>
+					</nav>
 
-							<div class="hovereffect">
-				        <img class="img-responsive" src="images/me.jpg" alt="">
-				            <div class="overlay">
-				                <p class="set1">
-				                    <a href="#">
-				                        <i class="fa fa-twitter"></i>
-				                    </a>
-				                    <a href="#">
-				                        <i class="fa fa-facebook"></i>
-				                    </a>
-				                </p>
-				                <hr>
-				                <hr>
-				                <p class="set2">
-				                    <a href="#">
-				                        <i class="fa fa-instagram"></i>
-				                    </a>
-				                    <a href="#">
-				                        <i class="fa fa-dribbble"></i>
-				                    </a>
-				                </p>
-				            </div>
-					    </div>
-							</span> -->
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>Hi! I'm Satnam</h1>
+									<p>
+										I'm a software engineer based in San Francisco.
+										<br>
+										<br>
+										I like to dabble around a lot of different things,
+										but right now I'm mostly about Ruby on Rails, Javascript
+										and performance optimization.
+										<!-- <ul>
+											<li>Ruby on Rails</li>
+											<li>Javascript</li>
+											<li>HTML/CSS</li>
+										</ul> -->
+									</p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<hr>
+								<section id="two">
+
+									<section class="project">
+										<div class="sidebar">
+											<img src="images/catchup.png" alt="" />
+											<ul class="technologies">
+												<li>
+													<img src="assets/css/icons/ruby.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/javascript.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/postgresql.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/rails.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/jquery.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/html.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/css.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/git.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/backbone.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/redis.png" alt="" />
+												</li>
+											</ul>
+										</div>
+										<div class="description">
+											<div class="title">
+												<h2>Catch Up</h2>
+											</div>
+											<div class="links">
+												<h2><a href="https://github.com/Satnam14/catchup">Github</a></h2>
+												<h2>&#8226;</h2>
+												<h2><a href="http://www.catchup.click">Live</a></h2>
+											</div>
+											<ul>
+												<li>Social networking application, inspired by Facebook.</li>
+												<li>Single-page Backbone.js application consuming RESTful JSON Rails API.</li>
+												<li>Houses an entity-ranking search feature powered by Redis as a cache store.</li>
+												<li>Delivers ranked search results for 10,000 users in an average time of < 50ms.</li>
+												<li>Extends the Backbone View class with a custom CompositeView class to optimize browser speed and keep the code DRY</li>
+											</ul>
+										</div>
+									</section>
+
+									<hr>
+
+									<section class="project">
+										<div class="sidebar">
+											<img src="images/asteroids.jpg" alt="" />
+											<ul class="technologies">
+												<li>
+													<img src="assets/css/icons/javascript.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/jquery.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/html.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/css.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/git.png" alt="" />
+												</li>
+											</ul>
+										</div>
+										<div class="description">
+											<div class="title">
+												<h2>Asteroids</h2>
+											</div>
+											<div class="links">
+												<h2><a href="https://github.com/Satnam14/Asteroids">Github</a></h2>
+												<h2>&#8226;</h2>
+												<h2><a href="https://satnam14.github.io/Asteroids">Live</a></h2>
+											</div>
+											<ul>
+												<li>Classic single user online game inspired by Atari’s Asteroids built using Javascript and jQuery.</li>
+												<li>Uses vector algebra and trigonometry to enable dynamic object movement and collisions.</li>
+												<li>Smooth rendering of graphics at 60 FPS using HTML5 Canvas API.</li>
+											</ul>
+										</div>
+									</section>
+
+									<hr>
+
+									<section class="project">
+										<div class="sidebar">
+											<img src="images/chess.jpeg" alt="" />
+											<ul class="technologies">
+												<li>
+													<img src="assets/css/icons/ruby.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/iterm.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/atom.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/git.png" alt="" />
+												</li>
+
+												<li>
+													<img src="assets/css/icons/pry.png" alt="" />
+												</li>
+											</ul>
+										</div>
 
 
+										<div class="description">
+											<div class="title">
+												<h2>Chess</h2>
+											</div>
+											<div class="links">
+												<h2><a href="https://github.com/Satnam14/Asteroids">Github</a></h2>
+											</div>
+											<ul>
+												<li>Beginner friendly CLI game implemented with Ruby, focused towards OOP concepts.</li>
+												<li>Houses a Articially Intelligent CPU player powered by Minimax algorithm and alpha-beta prunning.</li>
+												<li>Used IO/Console and Colorize gems to implement a convenient interface for user input.</li>
+												<li>Multi-level class inheritance structure to DRY up code.</li>
+											</ul>
+										</div>
+									</section>
 
-
-
-
-							<span class="image fit"><img src="images/me.jpg" alt="" /></span>
-						</div>
-						<div class="8u 12u(mobile)">
-							<header>
-								<h1>Hi! I'm <strong>Satnam Dhanoa</strong>.</h1>
-							</header>
-							<p>I'm a <strong>Software Engineer</strong> based in San Francisco, CA.
-							  <br>
-							  I love programming and have built web applications using Ruby, Ruby on Rails, Javascript, Backbone and HTML/CSS.
-						 		<br>
-
-							</p>
-							<a href="#work" class="button big scrolly">Learn about what I do</a>
-						</div>
-					</div>
-				</article>
-			</div>
-
-		<!-- Work -->
-			<div class="wrapper style2">
-				<article id="work">
-					<header>
-						<h2>Some of the projects that I've made</h2>
-					</header>
-					<div class="container">
-						<div class="row">
-							<div class="4u 12u(mobile)">
-								<section class="box style1">
-
-
-									<div class="hovereffect">
-						        <img class="img-responsive" src="./images/asteroids.jpg" alt="">
-						        <div class="overlay">
-						            <h2>Asteroids</h2>
-						            <a class="info" href="http://satnam14.github.io/Asteroids/">Click me!</a>
-						        </div>
-							    </div>
-
-									<h3>Asteroids</h3>
-									<p>Classic single user online game, built using Javascript and jQuery</p>
 								</section>
-							</div>
-							<div class="4u 12u(mobile)">
-								<section class="box style1">
-									<!-- <span class="icon featured fa-camera-retro"></span> -->
-									<div class="hovereffect">
-						        <img class="img-responsive" src="./images/catchup.jpg" alt="">
-						        <div class="overlay">
-						            <h2>Catchup</h2>
-						            <a class="info" href="http://www.catchup.click/">Click me!</a>
-						        </div>
-							    </div>
-									<h3>Catchup</h3>
-									<p>Social networking application inspired by Facebook, built with Rails and Backbone.js</p>
-								</section>
-							</div>
-							<div class="4u 12u(mobile)">
-								<section class="box style1">
-									<!-- <span class="icon featured fa-thumbs-o-up"></span> -->
-									<div class="hovereffect">
-						        <img class="img-responsive" src="./images/chess.png" alt="">
-						        <div class="overlay">
-						            <h2>Chess</h2>
-						            <a class="info" href="https://github.com/Satnam14/chess">Click me!</a>
-						        </div>
-							    </div>
+							</article>
 
-									<h3>Chess</h3>
-									<p>Beginner friendly CLI game implemented with Ruby</p>
-								</section>
-							</div>
-						</div>
-					</div>
-					<!-- <footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button big scrolly">See some of my recent work</a>
-					</footer> -->
-				</article>
-			</div>
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
 
-		<!-- Portfolio -->
-			<div class="wrapper style3">
-				<article id="portfolio">
-					<header>
-						<h2>Some of the techologies that I've used...</h2>
-					</header>
-
-					<div class="container">
-						<div class="row">
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/ruby.png" alt="" /></a>
-									<h3><a href="#">Ruby</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/rails.png" alt="" /></a>
-									<h3><a href="#">Rails</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/javascript.png" alt="" /></a>
-									<h3><a href="#">Javascript</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/HTML5.png" alt="" /></a>
-									<h3><a href="#">HTML5</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/backbone.png" alt="" /></a>
-									<h3><a href="#">Backbone</a></h3>
-								</article>
-							</div>
-						</div>
-						<div class="row">
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/jquery.png" alt="" /></a>
-									<h3><a href="#">jQuery</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/css.png" alt="" /></a>
-									<h3><a href="#">CSS</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/postgresql.png" alt="" /></a>
-									<h3><a href="#">PostgreSQL</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/git.png" alt="" /></a>
-									<h3><a href="#">Git</a></h3>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/java.png" alt="" /></a>
-									<h3><a href="#">Java</a></h3>
-								</article>
-							</div>
-						</div>
-					</div>
-					<!-- <footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button big scrolly">Get in touch with me</a>
-					</footer> -->
-				</article>
-			</div>
-
-		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<header>
-						<h2>Have me make stuff for you</h2>
-					</header>
-					<div>
-						<div class="row">
-							<div class="12u">
-								<a href="#" class="icon fa-map-marker fa-4x"><span class="label">Email</span></a>
 								<p>
-									41290 Vargas Road
-									<br>
-									Fremont, CA 94539
+									If you have an awesome team that is passionate about building
+									great software looking for a developer with the same drive,
+									please do not hesitate to reach out to me.
 								</p>
-							</div>
-							<div class="12u">
-								<a href="#" class="icon fa-phone fa-4x"><span class="label">Email</span></a>
-								<p>
-									(510)857-4457
-								</p>
-							</div>
-							<div class="12u">
-								<a href="#" class="icon fa-envelope fa-4x"><span class="label">Email</span></a>
-								<p>
-									satnam.dhanoa@outlook.com
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="12u">
-								<button type="button" onclick="location.href='http://google.com';">Resume</button>
-							</div>
-						</div>
-						<div class="row">
-							<div class="12u">
-								<hr />
-								<h3>Find me on ...</h3>
-								<ul class="social">
-									<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
-									<li><a href="https://www.linkedin.com/in/satnamdhanoa" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.tumblr.com/blog/satnam14" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									<li><a href="https://github.com/Satnam14" class="icon fa-github"><span class="label">Github</span></a></li>
-									<!--
-									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
-									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-									<li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-									-->
+
+								<a href="mailto:satnam.dhanoa@outlook.com" class="icon fa-envelope-o fa-2x"><span>  satnam.dhanoa@outlook.com</span></a>
+
+								<ul>
+									<li>
+										<a href="https://www.linkedin.com/in/satnamdhanoa">
+											<img src="assets/css/icons/linkedin.png"/></a>
+									</li>
+
+									<li>
+										<a href="https://github.com/Satnam14">
+											<img src="assets/css/icons/github.png"/></a>
+									</li>
+
+									<li>
+										<a href="http://stackoverflow.com/users/2780649/satnamxv63">
+											<img src="assets/css/icons/stackoverflow.png"/></a>
+									</li>
+
+									<li>
+										<a href="https://www.tumblr.com/blog/satnam14">
+											<img src="assets/css/icons/tumblr.png"/></a>
+									</li>
 								</ul>
-								<hr />
-							</div>
-						</div>
+
+								<a href="https://drive.google.com/open?id=0B0RB0Ii_TuRJU3RzNVFTS3d4UVk">Download Resume</a>
+
+							</article>
+
 					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Satnam Dhanoa. All rights reserved.</li>
-						</ul>
-					</footer>
-				</article>
+
 			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/skel-viewport.min.js"></script>
 			<script src="assets/js/util.js"></script>
