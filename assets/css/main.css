@@ -1542,6 +1542,32 @@
 					font-size: 1.25em;
 				}
 
+		/* Work */
+
+			@media screen and (max-width: 650px) {
+				#work {
+					visibility: hidden;
+					clear: both;
+					float: left;
+					margin: 10px auto 5px 20px;
+					width: 28%;
+					display: none;
+				}
+			}			
+
 		/* Contact */
 
+			@media screen and (max-width: 650px) {
+				#contact ul {
+					height: 110px;
+				}
+
+				#contact ul > li > a > img {
+					float: left;
+					margin-right: 2.5%;
+					margin-left: 2.5%;
+					width: 20%;
+					height: 30%;
+				}	
+			}
 	}
