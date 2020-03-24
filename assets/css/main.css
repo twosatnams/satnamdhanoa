@@ -1350,7 +1350,7 @@
 					.technologies {
 						margin-top: 20px;
 						list-style-type: none;
-						width: 270px;
+						width: 275px;
 					}
 
 					.technologies > li {
@@ -1363,7 +1363,7 @@
 					}
 
 					#contact > ul {
-						width: 50%;
+						width: 53%;
 				    list-style-type: none;
 				    margin: 0 auto;
 				    padding-top: 40px;
