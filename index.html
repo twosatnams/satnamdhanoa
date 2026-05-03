@@ -1,253 +1,519 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>Satnam Dhanoa</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!-- Google tag (gtag.js) -->
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7S2XRH9D3"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-S7S2XRH9D3');
-		</script>
-	</head>
-	<body>
+<head>
+    <meta charset="utf-8" />
+    <title>Satnam Dhanoa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0B0B0C;
+            --fg: #E8E3D8;
+            --dim: rgba(232, 227, 216, 0.55);
+            --faint: rgba(232, 227, 216, 0.16);
+            --accent: oklch(0.74 0.16 60);
+            --pad: clamp(20px, 5vw, 56px);
+        }
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+        * {
+            box-sizing: border-box;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#me" class="icon fa-home active"><span>Home</span></a>
-						<a href="#work" class="icon fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
-					</nav>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: "Inter Tight", system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-						<!-- Me -->
-							<article id="me" class="panel">
-								<header>
-									<h1>Hi! I'm Satnam</h1>
-									<p>
-									 A machine learning engineer in Seattle.
-									</p>
-								</header>
-								<a href="#work" class="jumplink pic">
-									<img src="images/me.jpg" alt="" />
-								</a>
-							</article>
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
 
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Projects</h2>
-								</header>
-								<hr>
-								<section id="two">
+        .mono {
+            font-family: "JetBrains Mono", ui-monospace, monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--dim);
+        }
 
-									<section class="project">
-										<div class="sidebar">
-											<img src="images/catchup.png" alt="" />
-											<ul class="technologies">
-												<li class="list-icon">
-													<img src="assets/css/icons/ruby.png" alt="" />
-												</li>
+        /* ─── HEADER ─── */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 18px var(--pad);
+            border-bottom: 1px solid var(--faint);
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/javascript.png" alt="" />
-												</li>
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/postgresql.png" alt="" />
-												</li>
+        /* ─── HERO ─── */
+        .hero {
+            padding: clamp(56px, 10vw, 120px) var(--pad) clamp(48px, 8vw, 80px);
+            border-bottom: 1px solid var(--faint);
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/rails.png" alt="" />
-												</li>
+        .hero-eyebrow {
+            color: var(--accent);
+            margin-bottom: clamp(28px, 6vw, 48px);
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/jquery.png" alt="" />
-												</li>
+        /* Name + headshot row */
+        .hero-top {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(28px, 4vw, 48px);
+            align-items: start;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/html.png" alt="" />
-												</li>
+        @media (min-width: 760px) {
+            .hero-top {
+                grid-template-columns: 1fr auto;
+                gap: clamp(32px, 5vw, 64px);
+            }
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/css.png" alt="" />
-												</li>
+        .hero-copy {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(28px, 4vw, 44px);
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/git.png" alt="" />
-												</li>
+        h1.name {
+            font-family: "Instrument Serif", Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(64px, 14vw, 200px);
+            line-height: 0.86;
+            letter-spacing: -0.04em;
+            margin: 0;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/backbone.png" alt="" />
-												</li>
+        h1.name .last {
+            position: relative;
+            display: inline-block;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/redis.png" alt="" />
-												</li>
-											</ul>
-										</div>
-										<div class="description">
-											<div class="title">
-												<h2>Catch Up</h2>
-											</div>
-											<div class="links">
-												<h2><a href="https://github.com/twosatnams/catchup">Github</a></h2>
-												<h2>&#8226;</h2>
-												<h2><a href="https://www.catchup.digital">Live</a></h2>
-											</div>
-											<ul>
-												<li>Social networking application, inspired by Facebook.</li>
-												<li>Single-page Backbone.js application consuming RESTful JSON Rails API.</li>
-												<li>Houses an entity-ranking search feature powered by Redis as a cache store.</li>
-												<li>Delivers ranked search results for 10,000 users in an average time of < 50ms.</li>
-												<li>Extends the Backbone View class with a custom CompositeView class to optimize browser speed and keep the code DRY</li>
-											</ul>
-										</div>
-									</section>
+        h1.name .pip {
+            position: absolute;
+            bottom: 0.22em;
+            right: -0.42em;
+            width: 0.42em;
+            height: 0.42em;
+            max-width: 18px;
+            max-height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
 
-									<hr>
+        .headshot {
+            position: relative;
+            width: clamp(320px, 42vw, 520px);
+            aspect-ratio: 4/5;
+            background: #141414;
+            overflow: hidden;
+            justify-self: start;
+        }
 
-									<section class="project">
-										<div class="sidebar">
-											<img src="images/asteroids.jpg" alt="" />
-											<ul class="technologies">
-												<li class="list-icon">
-													<img src="assets/css/icons/javascript.png" alt="" />
-												</li>
+        @media (min-width: 760px) {
+            .headshot {
+                justify-self: end;
+                margin-top: -72px;
+            }
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/jquery.png" alt="" />
-												</li>
+        @media (max-width: 759px) {
+            .headshot {
+                justify-self: center;
+            }
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/html.png" alt="" />
-												</li>
+        .headshot .ph-fill {
+            font-size: 9.5px;
+            padding: 12px;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/css.png" alt="" />
-												</li>
+        .headshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/git.png" alt="" />
-												</li>
-											</ul>
-										</div>
-										<div class="description">
-											<div class="title">
-												<h2>Asteroids</h2>
-											</div>
-											<div class="links">
-												<h2><a href="https://github.com/twosatnams/Asteroids">Github</a></h2>
-												<h2>&#8226;</h2>
-												<h2><a href="https://twosatnams.github.io/Asteroids">Live</a></h2>
-											</div>
-											<ul>
-												<li>Classic single user online game inspired by Atari’s Asteroids built using Javascript and jQuery.</li>
-												<li>Uses vector algebra and trigonometry to enable dynamic object movement and collisions.</li>
-												<li>Smooth rendering of graphics at 60 FPS using HTML5 Canvas API.</li>
-											</ul>
-										</div>
-									</section>
+        .headshot .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 9.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent);
+            z-index: 2;
+        }
 
-									<hr>
+        .lede {
+            font-family: "Inter Tight", sans-serif;
+            font-weight: 300;
+            font-size: clamp(22px, 3vw, 32px);
+            line-height: 1.25;
+            letter-spacing: -0.012em;
+            margin: 0;
+            color: var(--fg);
+            max-width: 28ch;
+        }
 
-									<section class="project">
-										<div class="sidebar">
-											<img src="images/chess.jpeg" alt="" />
-											<ul class="technologies">
-												<li class="list-icon">
-													<img src="assets/css/icons/ruby.png" alt="" />
-												</li>
+        /* ─── QUOTE BAND (text-only, replaces the wide portrait) ─── */
+        .quote-band {
+            padding: clamp(48px, 7vw, 84px) var(--pad);
+            border-bottom: 1px solid var(--faint);
+            text-align: center;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/iterm.png" alt="" />
-												</li>
+        .quote-band .eyebrow {
+            color: var(--accent);
+            margin-bottom: 24px;
+            display: inline-block;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/atom.png" alt="" />
-												</li>
+        .quote-band .quote {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(28px, 5vw, 56px);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin: 0 auto;
+            max-width: 22ch;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/git.png" alt="" />
-												</li>
+        .quote-band .quote em.accent {
+            color: var(--accent);
+            font-style: italic;
+        }
 
-												<li class="list-icon">
-													<img src="assets/css/icons/pry.png" alt="" />
-												</li>
-											</ul>
-										</div>
+        /* ─── PHOTO GRID (flexible 3-up; 4-up auto) ─── */
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            border-bottom: 1px solid var(--faint);
+        }
 
+        .photo {
+            position: relative;
+            aspect-ratio: 4/5;
+            background: #141414;
+            overflow: hidden;
+            border-left: 1px solid var(--faint);
+            border-top: 1px solid var(--faint);
+            margin: 0;
+        }
 
-										<div class="description">
-											<div class="title">
-												<h2>Chess</h2>
-											</div>
-											<div class="links">
-												<h2><a href="https://github.com/twosatnams/Asteroids">Github</a></h2>
-											</div>
-											<ul>
-												<li>Beginner friendly CLI game implemented with Ruby, focused towards OOP concepts.</li>
-												<li>Houses a Articially Intelligent CPU player powered by Minimax algorithm and alpha-beta prunning.</li>
-												<li>Used IO/Console and Colorize gems to implement a convenient interface for user input.</li>
-												<li>Multi-level class inheritance structure to DRY up code.</li>
-											</ul>
-										</div>
-									</section>
+        /* clean the edges so only interior dividers show */
+        .photo:first-child {
+            border-left: none;
+        }
 
-								</section>
-							</article>
+        @media (max-width: 519px) {
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
+            /* single column at narrow widths */
+            .photo {
+                border-left: none;
+            }
+        }
 
-								<ul>
-									<li>
-										<a href="https://www.linkedin.com/in/satnamdhanoa">
-											<img src="assets/css/icons/linkedin.png"/></a>
-									</li>
+        .photo .label {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent);
+            z-index: 2;
+        }
 
-									<li>
-										<a href="https://github.com/twosatnams">
-											<img src="assets/css/icons/github.png"/></a>
-									</li>
+        .photo .num {
+            position: absolute;
+            bottom: 18px;
+            right: 20px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 10.5px;
+            letter-spacing: 0.14em;
+            color: var(--dim);
+            z-index: 2;
+        }
 
-									<li>
-										<a href="http://stackoverflow.com/users/2780649/satnamxv63">
-											<img src="assets/css/icons/stackoverflow.png"/></a>
-									</li>
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-									<li>
-										<a href="https://twitter.com/realsatnam">
-											<img src="assets/css/icons/twitter.png"/></a>
-									</li>
-								</ul>
+        /* placeholder fill */
+        .ph-fill {
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(135deg, rgba(232, 227, 216, 0.06) 0 1px, transparent 1px 16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dim);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            text-align: center;
+            padding: 24px;
+        }
 
-							</article>
+        /* ─── PROJECTS ─── */
+        .projects {
+            padding: clamp(40px, 6vw, 64px) var(--pad) clamp(20px, 3vw, 28px);
+            border-bottom: 1px solid var(--faint);
+        }
 
-					</div>
+        .section-eyebrow {
+            color: var(--accent);
+            margin-bottom: clamp(24px, 4vw, 36px);
+        }
 
-			</div>
+        .project-list {
+            display: flex;
+            flex-direction: column;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+        .project {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: clamp(16px, 3vw, 32px);
+            align-items: center;
+            padding: clamp(20px, 3vw, 28px) 0;
+            border-top: 1px solid var(--faint);
+        }
 
-	</body>
+        .project:last-child {
+            border-bottom: 1px solid var(--faint);
+        }
+
+        .project .num {
+            color: var(--accent);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+        }
+
+        .project .name {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-size: clamp(36px, 6vw, 64px);
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .project .arrow {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--accent);
+        }
+
+        .project .tag {
+            display: block;
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 18px);
+            color: var(--dim);
+            margin-top: 4px;
+            letter-spacing: 0.005em;
+        }
+
+        /* ─── LINKS ─── */
+        .links {
+            padding: clamp(40px, 6vw, 64px) var(--pad);
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 16px;
+            padding: clamp(18px, 3vw, 24px) 0;
+            border-top: 1px solid var(--faint);
+            transition: padding-left 0.25s cubic-bezier(.2, .7, .3, 1);
+        }
+
+        .link:last-child {
+            border-bottom: 1px solid var(--faint);
+        }
+
+        .link:hover {
+            padding-left: 12px;
+        }
+
+        .link .name {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-size: clamp(28px, 5vw, 48px);
+            letter-spacing: -0.025em;
+            line-height: 1;
+        }
+
+        .link .arrow {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-size: clamp(24px, 3.5vw, 36px);
+            color: var(--accent);
+            transition: transform 0.25s cubic-bezier(.2, .7, .3, 1);
+        }
+
+        .link:hover .arrow {
+            transform: translate(6px, -6px);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px var(--pad) 32px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer .end {
+            color: var(--accent);
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span class="mono"><span class="dot"></span>Satnam Dhanoa</span>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="mono hero-eyebrow">◆ Personal index</div>
+
+        <div class="hero-top">
+            <div class="hero-copy">
+                <h1 class="name">
+                    Satnam<br />
+                    <span class="last">Dhanoa<span class="pip"></span></span>
+                </h1>
+                <p class="lede">
+                    Building with precision. Moving with intention.
+                </p>
+            </div>
+            <figure class="headshot">
+                <img src="images/me.jpg" alt="Portrait of Satnam Dhanoa" />
+            </figure>
+        </div>
+    </section>
+
+    <!-- QUOTE BAND (text-only) -->
+    <section class="quote-band">
+        <div class="mono eyebrow">◆ A note</div>
+        <p class="quote">
+            Different settings.<br />
+            Same <em class="accent">standard</em>.
+        </p>
+    </section>
+
+    <!-- LIVES — flexible photo grid (Floor / Trail / Court [+ optional 4th]) -->
+    <section class="photos">
+        <figure class="photo">
+            <div class="label">◆ On the trail</div>
+            <img src="images/hiking.jpg" alt="Satnam Dhanoa hiking" />
+            <div class="num">01</div>
+        </figure>
+        <figure class="photo">
+            <div class="label">◆ On the floor</div>
+            <img src="images/dance.jpg" alt="Satnam Dhanoa dancing ballroom" />
+            <div class="num">02</div>
+        </figure>
+        <figure class="photo">
+            <div class="label">◆ On the court</div>
+            <img src="images/tennis.jpg" alt="Satnam Dhanoa playing tennis" />
+            <div class="num">03</div>
+        </figure>
+        <!-- To add a 4th, just paste another <figure class="photo">…</figure> here.
+       The grid auto-flows: 4 cells become 2×2 on tablet, 1×4 on phone, 4-across on wide screens. -->
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <div class="mono section-eyebrow">◆ Building</div>
+        <div class="project-list">
+            <a class="project" href="https://dazzle.dance" target="_blank" rel="noreferrer">
+                <span class="num">01</span>
+                <span>
+                    <span class="name">Dazzle</span>
+                    <span class="tag">A competition platform for ballroom.</span>
+                </span>
+                <span class="arrow">↗</span>
+            </a>
+            <a class="project" href="https://thechannel.live" target="_blank" rel="noreferrer">
+                <span class="num">02</span>
+                <span>
+                    <span class="name">The Channel</span>
+                    <span class="tag">AI that helps your relationships flourish.</span>
+                </span>
+                <span class="arrow">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="links">
+        <div class="mono section-eyebrow">◆ Elsewhere</div>
+        <div class="link-list">
+            <a class="link" href="https://linkedin.com/in/satnamdhanoa" target="_blank" rel="noreferrer"><span class="name">LinkedIn</span><span class="arrow">↗</span></a>
+        </div>
+    </section>
+
+    <footer>
+        <span class="mono">© Satnam Dhanoa · 2026</span>
+        <span class="mono end">— end of index ◆</span>
+    </footer>
+
+</body>
+
 </html>
